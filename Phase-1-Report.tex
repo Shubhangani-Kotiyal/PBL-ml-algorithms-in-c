@@ -1,0 +1,378 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a4paper,left=2.0cm,right=2.0cm,top=1.55cm,bottom=1.55cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usepackage{setspace}
+
+% -------------------------------------------------
+% COLOURS
+% -------------------------------------------------
+\definecolor{TitleBlue}{RGB}{61,103,154}
+
+% -------------------------------------------------
+% GENERAL SETTINGS
+% -------------------------------------------------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\renewcommand{\arraystretch}{1.0}
+
+% The supplied document uses a clean sans-serif heading style
+% and italic serif-style explanatory text.
+\newcommand{\blueheading}[1]{%
+    {\sffamily\color{TitleBlue}\fontsize{15}{18}\selectfont #1}%
+}
+
+\newcommand{\bluebigheading}[1]{%
+    {\sffamily\bfseries\color{TitleBlue}\fontsize{16}{19}\selectfont #1}%
+}
+
+\newcommand{\instruction}[1]{%
+    {\itshape\fontsize{10.5}{12.5}\selectfont #1}%
+}
+
+\newcommand{\answerbox}[2][3.0cm]{%
+    \vspace{2pt}
+    \noindent
+    \fbox{%
+        \begin{minipage}[t][#1][t]{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+            \vspace{1mm}
+            \itshape #2
+        \end{minipage}
+    }
+}
+
+% -------------------------------------------------
+% HEADER / FOOTER
+% -------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\fancyhead[L]{%
+    \sffamily\bfseries\itshape\fontsize{10.5}{12}\selectfont
+    Btech CSE and DSCPP-III-2026-T170
+}
+\fancyhead[R]{%
+    \sffamily\bfseries\fontsize{10.5}{12}\selectfont
+    PROJECT PROPOSAL
+}
+\fancyfoot[R]{%
+    \itshape\fontsize{10}{12}\selectfont
+    Page \thepage
+}
+\setlength{\headheight}{14pt}
+\setlength{\headsep}{23pt}
+\setlength{\footskip}{24pt}
+
+% -------------------------------------------------
+% PAGE 1
+% -------------------------------------------------
+\begin{document}
+
+\vspace*{4mm}
+
+\bluebigheading{PROJECT AND TEAM INFORMATION}
+
+\vspace{13mm}
+
+\blueheading{Project Title}
+
+\vspace{1mm}
+
+
+
+\answerbox[0.8 cm]{ML-Core: A C++-Based Implementation of Fundamental Machine Learning Algorithms}
+
+\vspace{13mm}
+
+\blueheading{Student / Team Information}
+
+\vspace{2mm}
+
+% Team information table
+% Compact 3-member layout so all members remain on Page 1.
+\noindent
+\begin{tabularx}{\textwidth}{|>{\RaggedRight\arraybackslash}p{0.69\textwidth}|>{\RaggedRight\arraybackslash}X|}
+\hline
+\begin{minipage}[t]{\linewidth}
+\vspace{1.5mm}
+\textit{Team Name:}\\[-1mm]
+\textit{Team \#}
+\vspace{1.5mm}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}
+\vspace{1.5mm}
+\textit{ML Core}\\[-1mm]
+\textit{T170}
+\vspace{1.5mm}
+\end{minipage}
+\\
+\hline
+\begin{minipage}[t][3.25cm][t]{\linewidth}
+\vspace{1.5mm}
+\textbf{Team member 1 (Team Lead)}\\[-1mm]
+\textit{(Last Name, name: student ID: email, picture):}
+\vspace{2.0cm}
+\end{minipage}
+&
+\begin{minipage}[t][3.25cm][t]{\linewidth}
+\vspace{1.5mm}
+\textit{Kotiyal, Shubhangani -- 2510370294}\\
+\textit{2510370294@geu.ac.in}
+
+\vspace{2mm}
+\includegraphics[width=3.0cm,height=1.5cm,keepaspectratio]{member1.png}
+\end{minipage}
+\\
+\hline
+\begin{minipage}[t][3.25cm][t]{\linewidth}
+\vspace{1.5mm}
+\textbf{Team member 2}\\[-1mm]
+\textit{(Last Name, name: student ID: email, picture):}
+\vspace{2.0cm}
+\end{minipage}
+&
+\begin{minipage}[t][3.25cm][t]{\linewidth}
+\vspace{1.5mm}
+\textit{Agarwal, Ishanaya -- 2510380249}\\
+\textit{2510380249@geu.ac.in}
+
+\vspace{2mm}
+\includegraphics[width=3.0cm,height=1.5cm,keepaspectratio]{member2.png}
+
+\end{minipage}
+\\
+\hline
+\begin{minipage}[t][3.25cm][t]{\linewidth}
+\vspace{1.5mm}
+\textbf{Team member 3}\\[-1mm]
+\textit{(Last Name, name: student ID: email, picture):}
+\vspace{2.0cm}
+\end{minipage}
+&
+\begin{minipage}[t][3.25cm][t]{\linewidth}
+\vspace{1.5mm}
+\textit{Joshi, Harshita -- 2510380118}\\
+\textit{2510380118@geu.ac.in}
+
+\vspace{2mm}
+\includegraphics[width=3.0cm,height=1.5cm,keepaspectratio]{member3.png}
+\end{minipage}
+\\
+\hline
+\\
+
+\end{tabularx}
+
+\newpage
+
+% -------------------------------------------------
+% PAGE 2
+% -------------------------------------------------
+
+\bluebigheading{PROPOSAL DESCRIPTION (10 pts)}
+
+\vspace{12mm}
+
+\blueheading{Motivation (1 pt)}
+
+\vspace{1mm}
+
+
+
+\answerbox[6.3 cm]{
+Machine learning is widely used through high-level libraries such as Scikit-learn and TensorFlow. Although these tools are helpful, they can make the internal working of an algorithm appear like a black box. For example, a student can call a function to perform K-Means or SVM without seeing the calculations involved in updating centroids, determining a separating hyperplane, or performing dimensionality reduction. This project takes a more practical approach by implementing Linear Regression, SVM, KNN, K-Means, Hierarchical Clustering, and PCA directly in C++. By implementing these algorithms from scratch, the team will write its own loops, distance calculations, matrix operations, and parameter updates. Classes, objects, and encapsulation will organize each algorithm’s data and operations into understandable, reusable components. This approach makes the mathematics behind machine learning models transparent while developing object-oriented programming and computational efficiency skills. Covering regression, classification, clustering, and dimensionality reduction, the goal is not to match the capabilities of existing libraries, but to make machine learning something the team can build, debug, and explain with confidence.
+}
+
+\vspace{12mm}
+
+\blueheading{State of the Art / Current solution (1 pt)}
+
+\vspace{1mm}
+
+
+
+\answerbox[7.5 cm]{At present, much of classical machine learning uses high-level libraries. For example, Scikit-learn offers simple APIs for Linear Regression, SVM, KNN, K-Means, Hierarchical Clustering, and PCA, enabling users to train models and generate results with relatively little code. TensorFlow and PyTorch provide tensor operations and automatic differentiation, with a strong emphasis on deep learning. MATLAB and R also offer statistical and machine learning tools, while graphical applications such as Weka and Orange support experimentation through visual workflows. C++ libraries such as mlpack, dlib, and Shark provide reusable implementations for a range of machine learning applications. Although these tools offer documentation and access to implementation details, their abstractions and complexity can make it challenging for beginners to follow every mathematical step.
+Gap Identified: Beginners can benefit from simple C++ programs that explicitly demonstrate the mathematics and sequence of operations behind each algorithm. ML-Core addresses this learning need through readable implementations built from scratch, using classes, objects, and encapsulation to organize the code. This approach will help learners understand each algorithm’s calculations while developing their object-oriented programming skills.
+}
+
+\vspace{12mm}
+
+\blueheading{Project Goals and Milestones (2 pts)}
+
+\vspace{1mm}
+
+
+\answerbox[8 cm]{
+The main goal of ML-Core is to implement six machine learning algorithms—Linear Regression, SVM, KNN, K-Means, Hierarchical Clustering, and PCA—from scratch in C++ without using external machine learning libraries. The project will help the team understand how these algorithms learn from or identify patterns in data by implementing their mathematical operations step by step. Classes, objects, and encapsulation will organize each algorithm’s data and functions. 
+To keep the code understandable and avoid repetition, the team will develop reusable utilities for matrix operations, distance calculations, and CSV file handling. Initial prototypes will use console input before these shared utilities are integrated.
+The work will proceed through the following stages:
+Preparation: Study the mathematics behind each algorithm and translate its steps into program logic.
+Core Utilities: Develop reusable functions for numerical calculations, distance measurement, matrix operations, and file handling.
+Algorithm Development: Implement Linear Regression, KNN, SVM, K-Means, Hierarchical Clustering, and PCA as separate C++ classes.
+Testing and Validation: Test each implementation using small datasets with known results. Compare suitable outputs and evaluation metrics with Python’s Scikit-learn, accounting for differences in settings and initialization. Use separate plotting tools to visualize the results.
+Finalization: Integrate the implemented modules, prepare documentation explaining the mathematics and code, and demonstrate the system and the team’s learning outcomes.
+}
+
+\vspace{12mm}
+
+\blueheading{Project Approach (3 pts)}
+
+\vspace{1mm}
+
+
+
+
+
+\answerbox[7.5 cm]{1. How the Code Will Be Built: 
+
+We will build the project from scratch in C++, keeping each algorithm in a separate code file with its own class and required functions. Each program will handle its own input, calculations, and output. This will make the algorithms easier to understand, test, debug, and maintain independently.
+
+2. How the Algorithms Will Be Designed & Tested: 
+
+Before writing code, we will study the mathematics behind each algorithm, such as cost functions, gradients, distances, and eigenvalues where applicable, and convert these theoretical steps into C++ member functions.
+
+3. Testing will happen in three steps:
+
+1. Each program will be tested independently using small datasets with results that can be calculated by hand.
+
+2. Results will be compared with standard implementations such as Scikit-learn using comparable settings.
+
+3. Each program will be checked with different valid and invalid inputs to verify its calculations, predictions, and input handling.
+}
+
+\newpage
+
+% -------------------------------------------------
+% PAGE 3
+% -------------------------------------------------
+
+\blueheading{System Architecture (High Level Diagram)(2 pts)}
+
+\vspace{1mm}
+
+
+\answerbox[7.0 cm]{System Architecture
+
+ML-Core follows a modular design in which each algorithm is implemented in a separate C++ code file. Each program contains its own class and functions for input, calculations, and output, and runs independently.
+
+Input Handling: Each program accepts the numerical data and parameters required for its algorithm through console input. Basic checks help identify invalid inputs.
+
+Algorithm Implementation: The project includes planned implementations of Linear Regression, SVM, KNN, K-Means, Hierarchical Clustering, and PCA. Each algorithm’s calculations are performed within its own C++ class, without a shared utility layer.
+
+Output Handling: Each program displays its results in the console, such as predicted values, class labels, cluster assignments, or transformed data, depending on the algorithm. Evaluation measures are calculated where implemented, such as Mean Squared Error in Linear Regression.
+
+Data flows independently within each program: the user enters data, the program performs the algorithm’s calculations, and the results are displayed in the console. Keeping the algorithms in separate files makes them easier to understand, test, debug, and maintain.
+}
+
+\vspace{12mm}
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{project.png}
+    \caption{High level Diagram of Architecture}
+    \label{fig:placeholder}
+\end{figure}
+\blueheading{Project Outcome / Deliverables (1 pts)}
+
+\vspace{1mm}
+
+
+
+\answerbox[6.5 cm]{By the end of this project, the team will deliver:
+
+Working C++ Code: Six core machine learning algorithms—Linear Regression, SVM, KNN, K-Means, Hierarchical Clustering, and PCA—implemented from scratch in C++ without using external machine learning libraries.
+
+Separate Algorithm Programs: Individual code files containing classes and functions for each algorithm’s input handling, calculations, and output.
+
+Tested Results: Results checked using small datasets with known answers and compared with Python’s Scikit-learn using comparable settings.
+
+Clear Console Output: Readable results showing predicted values, class labels, cluster assignments, transformed data, and evaluation measures where applicable.
+
+Complete Guide: Documentation explaining the mathematics, code structure, execution steps, and test results.
+
+Final Demo: A live demonstration of the individual programs and a report describing the results and lessons learned.
+}
+
+\vspace{12mm}
+
+\blueheading{Assumptions}
+
+\vspace{6mm}
+
+
+
+\answerbox[7 cm]{
+1. Data Setup: The programs will work with small numerical datasets within their defined array limits. Data is expected to contain no missing values. Basic input validation will be included, but automatic data cleaning is outside the project’s scope.
+
+2. Tools Only: The algorithms will be implemented using standard C++ and headers such as `<iostream>` and `<cmath>`. No external machine learning libraries will be used in the implementations. Python’s Scikit-learn may be used separately for validation.
+
+3. Algorithm Scope: The SVM implementation will focus on linear binary classification. Nonlinear kernels and multiclass SVM are outside the initial scope.
+
+4. Manual Settings: Parameters such as the number of neighbours in KNN, the number of clusters in K-Means, and learning rates where required will be set manually rather than selected automatically.
+
+5. Single Computer: Each program will run independently on a single computer using its CPU. GPU processing and distributed computing are outside the project’s scope.
+
+6. Focus on Learning: The project is designed for educational purposes, prioritizing understandable code, mathematical clarity, and correctness rather than large-scale production use.
+
+}
+
+\vspace{12mm}
+
+\blueheading{References}
+
+\vspace{1mm}
+
+\answerbox[14 cm]{%
+\raggedright
+\small
+
+The following resources and references were used while planning the project:
+
+\begin{enumerate}
+\setlength{\itemsep}{3pt}
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}
+
+\item Bishop, C. M. (2006). \textit{Pattern Recognition and Machine Learning}. Springer. \url{https://link.springer.com/book/9780387310732}
+
+\item Hastie, T., Tibshirani, R., \& Friedman, J. (2009). \textit{The Elements of Statistical Learning: Data Mining, Inference, and Prediction} (2nd ed.). Springer. \url{https://hastie.su.domains/ElemStatLearn/}
+
+\item Mitchell, T. M. (1997). \textit{Machine Learning}. McGraw-Hill.
+
+\item Murphy, K. P. (2012). \textit{Machine Learning: A Probabilistic Perspective}. MIT Press. \url{https://probml.github.io/pml-book/}
+
+\item Cortes, C., \& Vapnik, V. (1995). Support-Vector Networks. \textit{Machine Learning}, 20(3), 273--297. \url{https://doi.org/10.1007/BF00994018}
+
+\item Cover, T., \& Hart, P. (1967). Nearest Neighbor Pattern Classification. \textit{IEEE Transactions on Information Theory}, 13(1), 21--27. \url{https://doi.org/10.1109/TIT.1967.1053964}
+
+\item MacQueen, J. (1967). Some Methods for Classification and Analysis of Multivariate Observations. \textit{Proceedings of the Fifth Berkeley Symposium on Mathematical Statistics and Probability}, 1, 281--297. \url{https://projecteuclid.org/ebooks/berkeley-symposium-on-mathematical-statistics-and-probability/Proceedings-of-the-Fifth-Berkeley-Symposium-on-Mathematical-Statistics-and/chapter/Some-methods-for-classification-and-analysis-of-multivariate-observations/bsmsp/1200512992}
+
+\item Jolliffe, I. T. (2002). \textit{Principal Component Analysis} (2nd ed.). Springer. \url{https://link.springer.com/book/10.1007/b98835}
+
+\item Kernighan, B. W., \& Ritchie, D. M. (1988). \textit{The C Programming Language} (2nd ed.). Prentice Hall.
+
+\item Press, W. H., Teukolsky, S. A., Vetterling, W. T., \& Flannery, B. P. (2007). \textit{Numerical Recipes: The Art of Scientific Computing} (3rd ed.). Cambridge University Press. \url{http://numerical.recipes/}
+
+\item Pedregosa, F., et al. (2011). Scikit-learn: Machine Learning in Python. \textit{Journal of Machine Learning Research}, 12, 2825--2830. \url{https://jmlr.org/papers/v12/pedregosa11a.html}
+
+\item Ng, A. \textit{CS229: Machine Learning Course Notes}. Stanford University. \url{https://cs229.stanford.edu/}
+
+\item GeeksforGeeks. Machine Learning Algorithms. \url{https://www.geeksforgeeks.org/machine-learning/}
+
+\item Scikit-learn Documentation. \url{https://scikit-learn.org/stable/documentation.html}
+
+\end{enumerate}
+}
+
+\end{document}
